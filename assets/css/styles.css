@@ -203,6 +203,23 @@ hr {
     text-decoration: none;
 }
 
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.socials svg {
+    font-size: 1.2rem;
+}
+
+.socials a {
+    color: #21b0fe;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 /* Responsive media queries */
 @media (max-width: 768px) {
     .shapes-circle, .shapes-square, .shapes-triangle {

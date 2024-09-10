@@ -149,7 +149,7 @@ The Reactive Interaction Gateway (RIG) is an open-source project written in Elix
 
 ---
 
-## Blog
+<!--## Blog
 
 {% for post in site.posts %}
 
@@ -162,3 +162,17 @@ The Reactive Interaction Gateway (RIG) is an open-source project written in Elix
     <p>{{ post.summary | markdownify }}</p>
 </div>
 {% endfor %}
+
+--->
+
+## About
+
+I'm a software developer with an interest in system architecture 🏗️, concurrency ⚙️, and language design 💻. I enjoy exploring how things work behind the scenes and applying that knowledge to build efficient and practical solutions. ✨
+
+<br>
+
+Feel free to take a look at my repositories or reach out - I'm always happy to discuss interesting ideas or collaborate on projects! 🌱
+
+<br>
+
+{% include socials.html %}

@@ -1,0 +1,8 @@
+<div class="socials">
+    {% for social in site.socials %}
+        <div>
+            <span class="iconify-inline" data-icon="{{ social.icon }}"></span> 
+            <a href="{{ social.url }}" target="_blank">{{ social.title }}</a>
+        </div>
+    {% endfor %}
+</div>
