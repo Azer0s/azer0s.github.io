@@ -232,6 +232,7 @@ hr {
     .fancy-line {
         margin-top: 30vh;
         margin-left: 4vw;
+        width: 40vw;
     }
 
     .fancy-curve {
@@ -269,6 +270,11 @@ hr {
         max-width: unset;
         text-wrap: wrap;
         text-align: left;
+    }
+
+    hr {
+        height: 4px;
+        max-width: 75vw;
     }
 }
 
