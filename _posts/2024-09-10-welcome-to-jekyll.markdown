@@ -1,28 +1,19 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-summary: "You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated."
+title:  "Coming soon!"
+summary: "I am still working on some interesting content for this blog. New posts will be published soon."
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+I am still working on some interesting content for this blog, in the meantime have fun with this function that generates a mandelbrot set in my favorite esolang, Befunge:
 
-Jekyll requires blog post files to be named according to the following format:
-
-`YEAR-MONTH-DAY-title.MARKUP`
-
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+```befunge
+0>:00p58*`#@_0>:01p78vv$$<
+@^+1g00,+55_v# !`\+*9<>4v$
+@v30p20"?~^"< ^+1g10,+*8<$
+@>p0\>\::*::882**02g*0v >^
+`*:*" d":+*:-*"[Z"+g3 < |<
+v-*"[Z"+g30*g20**288\--\<#
+>2**5#>8*:*/00g"P"*58*:*v^
+v*288 p20/**288:+*"[Z"+-<:
+>*%03 p58*:*/01g"3"* v>::^
+   \_^#!:-1\+-*2*:*85<^
+```
