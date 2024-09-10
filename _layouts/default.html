@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="shapes">
+                <div class="shapes-circle"></div>
+                <div class="shapes-square"></div>
+                <div class="shapes-triangle"></div>
+            </div>
+
+            <div class="text-section">
+                <h1><b>Hello, my name is Ariel.</b><br>{% if page.sub %} {{ page.sub }} {% else %} Nice to meet you! {% endif %}</h1>
+                <img src="{% if page.image %}{{ page.image }}{% else %} /assets/images/{{ site.profile_pic }} {% endif %}" alt="Profile picture" class="profile-pic">
+            </div>
+
+            <div class="fancy-line"></div>
+            <div class="fancy-curve"></div>
+        </div>
+    </div>
+
+    {% if page.no_content %}
+    
+    {% else %}
+    <div class="portfolio-section">
+        {{ content }}
+    </div>
+    {% endif %}
+</body>
+</html>

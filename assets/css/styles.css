@@ -1,0 +1,296 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* add font from files */
+@font-face {
+    font-family: 'Space Mono';
+    src: url('/assets/fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: regular;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('/assets/fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Space Mono', monospace;
+    background-color: #111;
+}
+
+/* Scrollable layout */
+.header {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Shapes and Text Layout */
+.shapes {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2vw; /* Adjust spacing between shapes */
+    margin-bottom: 20px;
+}
+
+.shapes-circle, .shapes-square, .shapes-triangle {
+    width: 6vw;
+    aspect-ratio: 1/1;
+}
+
+.shapes-circle {
+    background: #fe218b;
+    border-radius: 50%;
+}
+
+.shapes-square {
+    background: #fed700;
+}
+
+.shapes-triangle {
+    width: 0;
+    height: 0;
+    border-left: 3vw solid transparent;
+    border-right: 3vw solid transparent;
+    border-bottom: 6vw solid #21b0fe;
+    transform: rotate(-90deg);
+}
+
+/* Text and Image Section */
+.text-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.text-section h1 {
+    font-size: 3.2vw;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.profile-pic {
+    width: 12vw;
+    aspect-ratio: 1/1;
+    margin-left: 3vw;;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 4px; 
+}
+
+.fancy-line {
+    position: absolute;
+    margin-top: 50vh;
+    width: 30vw;
+    height: 4px;
+    background: linear-gradient(to right, #21b0fe, #fe218b);
+    z-index: 1;
+}
+
+.fancy-curve {
+    position: absolute;
+    right: 0vw;
+    bottom: 0vw;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-image: linear-gradient(45deg, #fe218b, #21b0fe) 1;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Portfolio section */
+.portfolio-section {
+    background-color: #111;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-section h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-section p {
+    font-size: 1.2rem;
+    max-width: 50vw;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.portfolio-section details {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 50vw;
+}
+
+.portfolio-section summary {
+    margin-bottom: 1vh;
+}
+
+.portfolio-section p>a {
+    color: #21b0fe;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display: inline-block;
+}
+
+hr {
+    border: 0;
+    height: 4px;
+    background: linear-gradient(to right, #21b0fe, #fe218b);
+    max-width: 50vw;
+    margin: 0 auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.highlight {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 50vw;
+    font-size: 1.2rem;
+    overflow: scroll;
+}
+
+.post {
+    margin: 0 auto;
+    max-width: 50vw;
+    text-wrap: wrap;
+    text-align: left;
+}
+
+.post h3 {
+    color: #21b0fe;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.post a {
+    text-decoration: none;
+}
+
+/* Responsive media queries */
+@media (max-width: 768px) {
+    .shapes-circle, .shapes-square, .shapes-triangle {
+        width: 6vw;
+        aspect-ratio: 1/1;
+    }
+
+    .shapes-triangle {
+        border-left: 5vw solid transparent;
+        border-right: 5vw solid transparent;
+        border-bottom: 10vw solid #21b0fe;
+    }
+
+    .profile-pic {
+        width: 18vw;
+        height: 18vw;
+    }
+
+    .text-section h1 {
+        font-size: 5vw;
+    }
+
+    .text-section h1 {
+        margin-left: 4vw;
+    }
+
+    .fancy-line {
+        margin-top: 30vh;
+        margin-left: 4vw;
+    }
+
+    .fancy-curve {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .shapes {
+        margin-left: 4vw;
+        gap: 5vw;
+    }
+
+    .portfolio-section p {
+        max-width: unset;
+        font-size: unset;
+    }
+
+    .portfolio-section details {
+        max-width: unset;
+        font-size: unset;
+    }
+
+    .highlight {
+        max-width: unset;
+        font-size: unset;
+    }
+
+    .portfolio-section h3 {
+        font-size: 1.7rem;
+        text-align: left;
+        margin-top: 4vh;
+    }
+
+    .post {
+        max-width: unset;
+        text-wrap: wrap;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .shapes-circle, .shapes-square, .shapes-triangle {
+        width: 12vw;
+        aspect-ratio: 1/1;
+    }
+
+    .shapes-triangle {
+        border-left: 6vw solid transparent;
+        border-right: 6vw solid transparent;
+        border-bottom: 12vw solid #21b0fe
+    }
+
+    .profile-pic {
+        width: 20vw;
+        height: 20vw;
+        margin-right: 3vw;
+    }
+
+    .text-section h1 {
+        font-size: 6vw;
+    }
+}

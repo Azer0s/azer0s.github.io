@@ -1,0 +1,89 @@
+body {
+    background-color: #111;
+}
+
+.header {
+    height: 20vh;
+}
+
+pre {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.post-section {
+    background-color: #111;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    min-height: 80vh;
+}
+
+.post-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.post-section h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.post-section p {
+    font-size: 1.2rem;
+    max-width: 50vw;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.post-section details {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 50vw;
+}
+
+.post-section summary {
+    margin-bottom: 1vh;
+}
+
+.post-section p>a {
+    color: #21b0fe;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .post-section p {
+        max-width: unset;
+        font-size: unset;
+    }
+
+    .post-section details {
+        max-width: unset;
+        font-size: unset;
+    }
+
+    .highlight {
+        max-width: unset;
+        font-size: unset;
+    }
+
+    .post-section h3 {
+        font-size: 1.7rem;
+        text-align: left;
+        margin-top: 4vh;
+    }
+
+    .post-section h2 {
+        font-size: 2.5rem;
+        margin-top: 4vh;
+    }
+
+    .post {
+        max-width: unset;
+        text-wrap: wrap;
+        text-align: left;
+    }
+}

@@ -1,0 +1,18 @@
+title: Portfolio - Ariel Simulevski
+email: ariel@simulevski.at
+url: "https://simulevski.at"
+github_username: Azer0s
+profile_pic: profile_image.jpg
+google_analytics: G-6SFVRN5WHY
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class: 'syntax'
+
+theme: minima
+plugins:
+  - jekyll-feed
