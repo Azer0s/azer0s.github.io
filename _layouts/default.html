@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
+<script async src="/assets/js/main.js"></script>
 <body>
     <div class="header">
         <div class="container">
@@ -11,8 +12,12 @@
             </div>
 
             <div class="text-section">
-                <h1><b>Hello, my name is Ariel.</b><br>{% if page.sub %} {{ page.sub }} {% else %} Nice to meet you! {% endif %}</h1>
-                <img src="{% if page.image %}{{ page.image }}{% else %} /assets/images/{{ site.profile_pic }} {% endif %}" alt="Profile picture" class="profile-pic">
+                <h1><b>Hello, my name is <span class="name">Ariel.</span></b><br>{% if page.sub %} {{ page.sub }} {% else %} Nice to meet you! {% endif %}</h1>
+
+                <div class="image-container">
+                    <span class="lightbulb">💡</span>
+                    <img src="{% if page.image %}{{ page.image }}{% else %} /assets/images/{{ site.profile_pic }} {% endif %}" alt="Profile picture" class="profile-pic">
+                </div>
             </div>
 
             <div class="fancy-line"></div>

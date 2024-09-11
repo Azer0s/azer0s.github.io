@@ -72,6 +72,41 @@ body, html {
     border-right: 3vw solid transparent;
     border-bottom: 6vw solid #21b0fe;
     transform: rotate(-90deg);
+    transition: transform 0.5s;
+}
+
+.shapes-triangle:hover {
+    transform: rotate(-0.5turn);
+    cursor: pointer;
+}
+
+.name {
+    transition: color 0.5s;
+}
+
+.name:hover {
+    color: #21b0fe;
+    cursor: pointer;
+}
+
+.lightbulb {
+    margin-left: 3vw;
+    width: 12vw;
+    aspect-ratio: 1/1;
+    text-align: center;
+    line-height: 12vw;
+    position: absolute;
+    transition: transform 0.5s;
+    z-index: 10;
+}
+
+.image-container:hover .lightbulb {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.profile-pic:hover {
+    cursor: pointer;
 }
 
 /* Text and Image Section */
@@ -89,13 +124,19 @@ body, html {
     line-height: 1.2;
 }
 
+.image-container {
+    margin-top: 6px;
+}
+
 .profile-pic {
+    position: relative;
     width: 12vw;
     aspect-ratio: 1/1;
-    margin-left: 3vw;;
+    margin-left: 3vw;
     border-radius: 50%;
     object-fit: cover;
-    padding: 4px; 
+    padding: 4px;
+    z-index: 20;
 }
 
 .fancy-line {
@@ -128,11 +169,13 @@ body, html {
     color: white;
     padding: 50px;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .portfolio-section h2 {
     font-size: 3rem;
     margin-bottom: 20px;
+    transition: transform 0.5s;
 }
 
 .portfolio-section h3 {
@@ -218,6 +261,17 @@ hr {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+@media (max-width: 1300px) {
+    .lightbulb {
+        display: none;
+    }
+
+    .image-container:hover .lightbulb {
+        cursor: pointer;
+        display: none;
+    }
 }
 
 /* Responsive media queries */
