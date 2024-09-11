@@ -303,6 +303,10 @@ hr {
         aspect-ratio: 1/1;
     }
 
+    .portfolio-section h2 {
+        font-size: 2.67rem;
+    }
+
     .shapes-triangle {
         border-left: 5vw solid transparent;
         border-right: 5vw solid transparent;
