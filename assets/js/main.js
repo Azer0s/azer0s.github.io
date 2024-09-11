@@ -3,16 +3,17 @@ function timeout(ms) {
 }
 
 async function scrollToAndEnlarge(selector) {
+    let element = document.querySelector(selector);
     await timeout(200);
     
-    document.querySelector(selector).scrollIntoView({ 
+    element.scrollIntoView({ 
         behavior: 'smooth',
     });
 
     await timeout(300);
-    document.querySelector(selector).style.transform = "scale(1.4)";
+    element.style.transform = "scale(1.4)";
     await timeout(300);
-    document.querySelector(selector).style.transform = "scale(1)";
+    element.style.transform = "scale(1)";
 }
 
 /*
@@ -40,20 +41,41 @@ document.querySelector(".profile-pic").addEventListener("click", async function(
 document.querySelector(".image-container").addEventListener("mouseenter", async function() {
     let imageHeight = document.querySelector(".image-container img").clientHeight;
 
-    document.querySelector(".lightbulb").style.transform = `translateY(-${imageHeight*0.7}px)`;
+    let lightbulb = document.querySelector(".lightbulb");
+    lightbulb.style.transform = `translateY(-${imageHeight*0.7}px)`;
 });
 
 document.querySelector(".image-container").addEventListener("mouseleave", async function() {
-    document.querySelector(".lightbulb").style.transform = `translateY(0px)`;
+    let lightbulb = document.querySelector(".lightbulb");
+    lightbulb.style.transform = `translateY(0px)`;
 });
 
 function resizeLightbulb() {
     let imageHeight = document.querySelector(".image-container img").clientHeight;
-    document.querySelector(".lightbulb").style.fontSize = `${imageHeight*0.3}px`;
+
+    let lightbulb = document.querySelector(".lightbulb");
+    lightbulb.style.fontSize = `${imageHeight*0.3}px`;
 }
 
 window.onresize = function() {
     resizeLightbulb();
 }
 
+for (let heading of document.querySelectorAll("h2")) {
+    let upArrow = document.createElement("span");
+    upArrow.classList.add("iconify-inline");
+    upArrow.classList.add("up-arrow");
+    upArrow.setAttribute("data-icon", "codicon:fold-up");
+
+    heading.appendChild(upArrow);
+}
+
 resizeLightbulb();
+setTimeout(() => {
+    for (let svg of document.querySelectorAll("h2 > svg")) {
+        svg.addEventListener("click", async function() {
+            await timeout(200);
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    }
+}, 0);

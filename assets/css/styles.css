@@ -178,6 +178,22 @@ body, html {
     transition: transform 0.5s;
 }
 
+.up-arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    display: inline-block;
+    margin-left: 1vw;
+    transition: transform 0.25s;
+}
+
+.up-arrow:hover {
+    transform: translateY(-5px);
+}
+
+summary {
+    cursor: pointer;
+}
+
 .portfolio-section h3 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -264,13 +280,8 @@ hr {
 }
 
 @media (max-width: 1300px) {
-    .lightbulb {
-        display: none;
-    }
-
-    .image-container:hover .lightbulb {
-        cursor: pointer;
-        display: none;
+    .fancy-line {
+        margin-top: 40vh;
     }
 }
 
@@ -290,6 +301,11 @@ hr {
     .profile-pic {
         width: 18vw;
         height: 18vw;
+    }
+
+    .lightbulb {
+        width: 18vw;
+        line-height: 18vw;
     }
 
     .text-section h1 {
@@ -365,6 +381,11 @@ hr {
         width: 20vw;
         height: 20vw;
         margin-right: 3vw;
+    }
+
+    .lightbulb {
+        width: 20vw;
+        line-height: 20vw;
     }
 
     .text-section h1 {
