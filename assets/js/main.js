@@ -62,20 +62,20 @@ window.onresize = function() {
 }
 
 for (let heading of document.querySelectorAll("h2")) {
+    let upArrowContainer = document.createElement("div");
+    upArrowContainer.classList.add("up-arrow-container");
+    upArrowContainer.addEventListener("click", async function() {
+        await timeout(200);
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+    
     let upArrow = document.createElement("span");
     upArrow.classList.add("iconify-inline");
     upArrow.classList.add("up-arrow");
     upArrow.setAttribute("data-icon", "codicon:fold-up");
 
-    heading.appendChild(upArrow);
+    upArrowContainer.appendChild(upArrow);
+    heading.appendChild(upArrowContainer);
 }
 
 resizeLightbulb();
-setTimeout(() => {
-    for (let svg of document.querySelectorAll("h2 > svg")) {
-        svg.addEventListener("click", async function() {
-            await timeout(200);
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-    }
-}, 0);

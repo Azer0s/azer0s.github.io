@@ -176,18 +176,25 @@ body, html {
     font-size: 3rem;
     margin-bottom: 20px;
     transition: transform 0.5s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1vw;
 }
 
 .up-arrow {
     cursor: pointer;
     font-size: 2rem;
     display: inline-block;
-    margin-left: 1vw;
     transition: transform 0.25s;
 }
 
 .up-arrow:hover {
     transform: translateY(-5px);
+}
+
+.up-arrow-container {
+    display: inline;
 }
 
 summary {
@@ -282,6 +289,10 @@ hr {
 @media (max-width: 1300px) {
     .fancy-line {
         margin-top: 40vh;
+    }
+
+    .portfolio-section h2 {
+        column-gap: 2vw;
     }
 }
 
