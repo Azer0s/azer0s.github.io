@@ -1,3 +1,7 @@
+:root {
+    --post-desktop-max-width: 50vw;
+}
+
 body {
     background-color: #111;
 }
@@ -19,28 +23,82 @@ pre {
     min-height: 80vh;
 }
 
-.post-section h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+p:has(> br) {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
 }
 
-.post-section h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+blockquote {
+    max-width: var(--post-desktop-max-width);
+    margin: 0 auto !important;
+    box-decoration-break: clone;
+    display: flex;
+}
+
+.copyright {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+    color: white;
+}
+
+.socials {
+    margin-bottom: 2vh;
+}
+
+blockquote > p {
+    font-size: 1.2rem !important;
+    background-color: #333;
+    padding-bottom: 1.5vh;
+    padding-right: 1vw !important;
+    padding-left: 0.5vw;
+    width: fit-content;
+    margin-left: 0 !important;
+
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    align-items: baseline;
+    gap: 1vw;
+}
+
+blockquote > p::before {
+    content: "“";
+    font-size: 3rem;
+    color: #21b0fe;
+}
+
+.post-section h1 {
+    font-size: 3rem;
+    margin: 0 auto;
+    margin-bottom: 4vh;
+    margin-top: 4vh;
+    max-width: var(--post-desktop-max-width);
+}
+
+.post-section h2 {
+    font-size: 3rem;
+    margin: 0 auto;
+    margin-bottom: 4vh;
+    margin-top: 4vh;
+    max-width: var(--post-desktop-max-width);
 }
 
 .post-section p {
     font-size: 1.2rem;
-    max-width: 50vw;
+    max-width: var(--post-desktop-max-width);
     margin: 0 auto;
     text-align: left;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding-right: 2vw;
 }
 
 .post-section details {
     font-size: 1.5rem;
     text-align: left;
     margin: 0 auto;
-    max-width: 50vw;
+    max-width: var(--post-desktop-max-width);
 }
 
 .post-section summary {
@@ -55,6 +113,16 @@ pre {
 }
 
 @media (max-width: 768px) {
+    blockquote {
+        max-width: unset;
+    }
+
+    blockquote > p {
+        max-width: unset;
+        font-size: unset !important;
+        padding-right: 2vw !important;
+    }
+
     .post-section p {
         max-width: unset;
         font-size: unset;
@@ -79,6 +147,7 @@ pre {
     .post-section h2 {
         font-size: 2.5rem;
         margin-top: 4vh;
+        max-width: unset;
     }
 
     .post {

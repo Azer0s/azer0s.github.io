@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
+<script async src="/assets/js/post.js"></script>
 <link rel="stylesheet" href="/assets/css/post.css">
 <body>
     <div class="header">
@@ -14,10 +15,20 @@
     </div>
 
     <div class="post-section">
+        <h1>{{ page.title }}</h2>
+
         <hr>
 
-        <h2>{{ page.title }}</h2>
         {{ content }}
     </div>
+
+    <hr>
+
+    <p class="copyright">Ariel Simulevski &copy; 2024</p>
+
+    {% include socials.html %}
+
+    <br>
+    
 </body>
 </html>
