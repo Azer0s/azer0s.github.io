@@ -251,6 +251,29 @@ hr {
     overflow: scroll;
 }
 
+@supports selector(::-webkit-scrollbar) {
+    .highlight::-webkit-scrollbar {
+        display: block;
+        height: 5px;
+        background: #111;
+    }
+    
+    .highlight::-webkit-scrollbar-corner {
+        background: #111;
+    }
+    
+    .highlight::-webkit-scrollbar-thumb {
+        background: linear-gradient(to right, #21b0fe, #fe218b);
+        border-radius: 10px;
+        height: 1px;
+    }
+
+    .highlight > pre {
+        padding-right: 1vw;
+        padding-bottom: 1vh;
+    }
+}
+
 .post {
     margin: 0 auto;
     max-width: 50vw;
