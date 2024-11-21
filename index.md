@@ -81,7 +81,7 @@ pogmalloc is a simple, fast, and efficient memory allocator I built in C. It fea
 
 ### Hummus 🌯
 
-Humus is a LISP-ish programming language I built in Go. It features a simple, easy-to-use syntax and a powerful macro system. I created Hummus because I wanted a tool to experiment with language design and implementation. I actually did a lot of data processing with it. Actually working with a language I created was a lot of fun!
+Hummus is a LISP-ish programming language I built in Go. It features a simple, easy-to-use syntax and a powerful macro system. I created Hummus because I wanted a tool to experiment with language design and implementation. I actually did a lot of data processing with it. Actually working with a language I created was a lot of fun!
 
 [GitHub](https://github.com/Azer0s/Hummus)
 
