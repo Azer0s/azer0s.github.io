@@ -1,5 +1,5 @@
 title: "Portfolio - Ariel Simulevski"
-description: "Ariel Simulevski's portfolio"
+description: "My portfolio, personal website, and blog.""
 email: "ariel@simulevski.at"
 url: "https://simulevski.at"
 
@@ -30,3 +30,4 @@ kramdown:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
